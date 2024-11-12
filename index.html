@@ -9,7 +9,18 @@
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
-/>
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+    <style>
+        
+        #animationContainer {
+            width: 30px; 
+            height: 34px; 
+            display: inline-block; 
+            vertical-align: middle; 
+            background-color: transparent; 
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -21,10 +32,9 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="https://www.facebook.com" target="_blank" ><i class="ri-facebook-fill"></i></a></li>
+                <li><a href="https://www.facebook.com" target="_blank"><i class="ri-facebook-fill"></i></a></li>
                 <li><a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-fill"></i></a></li>
-                <li><a href="#" ><i class="ri-menu-line"></i></a></li>
-
+                <li><a href="#"><i class="ri-menu-line"></i></a></li>
             </ul>
         </div>
     </div>
@@ -34,8 +44,19 @@
         </div>
     </div>
     <div class="explore">
-        <button onclick="window.location.href='explore.html'">Explore<i class="ri-search-eye-fill"></i></button>
+        <button onclick="window.location.href='explore.html'">Explore
+            <div id="animationContainer"></div>
+        </button>
     </div>
 
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('animationContainer'), // the DOM element that will contain the animation
+            renderer: 'svg', // render as svg
+            loop: true, // loop the animation
+            autoplay: true, // start playing the animation immediately
+            path: 'ani.json' // Replace with your actual JSON file path
+        });
+    </script>
 </body>
 </html>
